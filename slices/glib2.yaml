@@ -1,0 +1,60 @@
+package: glib2
+
+essential:
+  - glib2_copyright
+
+slices:
+  bins:
+    essential:
+      # On armhf (only), these also need libgcc-s1_libs
+      - glib2_libs
+    contents:
+      /usr/bin/gapplication:
+      /usr/bin/gdbus:
+      /usr/bin/gio:
+      /usr/bin/gio-querymodules:
+      /usr/bin/glib-compile-schemas:
+
+  core:
+    essential:
+      - libatomic_libs
+      - glibc_libs
+      - pcre2_libs
+    contents:
+      /usr/lib*/libglib-2.0.so.0*:
+
+  libgmodule:
+    essential:
+      - glib2_core
+    contents:
+      /usr/lib*/libgmodule-2.0.so.0*:
+
+  libgobject:
+    essential:
+      - libffi_libs
+      - glib2_core
+    contents:
+      /usr/lib*/libgobject-2.0.so.0*:
+
+  libgthread:
+    essential:
+      - glib2_core
+    contents:
+      /usr/lib*/libgthread-2.0.so.0*:
+
+  libs:
+    essential:
+      - libffi_libs
+      - glib2_core
+      - glib2_libgmodule
+      - glib2_libgobject
+      - glib2_libgthread
+      - libmount_libs
+      - libselinux_libs
+      - zlib_libs
+    contents:
+      /usr/lib/*-linux-*/libgio-2.0.so.0*:
+
+  copyright:
+    contents:
+      /usr/share/licenses/glib2/COPYING:

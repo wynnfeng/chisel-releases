@@ -9,7 +9,7 @@ slices:
       - filesystem_bin
       - filesystem_etc
       - filesystem_home
-      - filesystem_lib
+      - filesystem_libs
       - filesystem_tmp
       - filesystem_var
 
@@ -19,17 +19,17 @@ slices:
 
   bin:
     contents:
-      /bin:
-      /sbin:
       /usr/bin/:
       /usr/sbin/:
+      /bin/:
+      /sbin/:
 
-  lib:
+  libs:
     contents:
-      /lib:
-      /lib64: {arch: [amd64, ppc64el]}
       /usr/lib/:
-      /usr/lib64/: {arch: [amd64, ppc64el]}
+      /usr/lib64/: {arch: [x86_64, aarch64]}
+      /lib64/:
+      /lib/:
 
   tmp:
     contents:
@@ -53,13 +53,12 @@ slices:
   release-info:
     essential:
       - filesystem_etc
-      - filesystem_lib
+      - filesystem_libs
+      - setup_hostdata
     contents:
       /etc/opencloudos-stream-release:
-      /etc/host.conf:
       /etc/issue:
       /etc/issue.net:
-      /etc/opencloudos-stream-release:
       /etc/os-release:
       /usr/lib/os-release:
 
@@ -72,4 +71,4 @@ slices:
 
   copyright:
     contents:
-      /usr/share/doc/filesystem/copyright:
+      /usr/share/licenses/:

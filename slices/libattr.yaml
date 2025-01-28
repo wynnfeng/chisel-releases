@@ -1,0 +1,13 @@
+package: libattr
+
+
+slices:
+  config:
+    contents:
+      /etc/xattr.conf:
+
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libattr.so.1*:

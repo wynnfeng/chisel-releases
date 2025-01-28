@@ -1,0 +1,28 @@
+package: bash
+
+essential:
+  - bash_copyright
+
+slices:
+  config:
+    contents:
+      /etc/skel/.bash_logout:
+      /etc/skel/.bashrc:
+      /etc/skel/.bash_profile:
+
+  bins:
+    essential:
+      - bash_config
+      - glibc_libs
+      - ncurses-libs_libs
+    contents:
+      # user should manually link /bin/sh to /bin/bash
+      /usr/bin/bash: 
+      /usr/bin/bashbug:
+      /usr/bin/sh:
+      /bin/sh: {symlink: /usr/bin/sh}
+      /bin/bash: {symlink: /usr/bin/bash}
+
+  copyright:
+    contents:
+      /usr/share/licenses/bash/COPYING:

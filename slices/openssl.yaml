@@ -6,27 +6,17 @@ essential:
 slices:
   bins:
     essential:
-      - glibc_config
       - glibc_libs
       - openssl-libs_libs
       - openssl_config
-      - openssl_data
+      - crypto-policies_openssl
     contents:
       /usr/bin/openssl:
 
   config:
-    contents:
-      /etc/ssl/openssl.cnf:
-      /etc/ssl/certs:
-      /etc/pki/tls/certs:
-      /etc/pki/tls/openssl.cnf:
-
-  data:
-    contents:
-      /etc/ssl/cert.pem:
-      /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem:
-
+    essential:
+      - ca-certificates_data
 
   copyright:
     contents:
-      /usr/share/doc/openssl/copyright:
+      /usr/share/licenses/openssl/LICENSE.txt:

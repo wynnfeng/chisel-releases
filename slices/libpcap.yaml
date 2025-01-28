@@ -1,0 +1,15 @@
+package: libpcap
+
+essential:
+  - libpcap_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libpcap.so.1*:
+
+  copyright:
+    contents:
+      /usr/share/licenses/libpcap/LICENSE:

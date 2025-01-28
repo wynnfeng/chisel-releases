@@ -1,7 +1,7 @@
-package: libssl3t64
+package: openssl-libs
 
 essential:
-  - libssl3t64_copyright
+  - openssl-libs_copyright
 
 slices:
   libs:
@@ -10,13 +10,13 @@ slices:
       - libzstd_libs
       - zlib_libs
     contents:
-      /usr/lib/*-linux-*/engines-3/afalg.so:
-      /usr/lib/*-linux-*/engines-3/loader_attic.so:
-      /usr/lib/*-linux-*/engines-3/padlock.so:
-      /usr/lib/*-linux-*/libcrypto.so.*:
-      /usr/lib/*-linux-*/libssl.so.*:
-      /usr/lib/*-linux-*/ossl-modules/legacy.so:
+      /usr/lib*/engines-3/afalg.so:
+      /usr/lib*/engines-3/loader_attic.so:
+      /usr/lib*/engines-3/padlock.so:
+      /usr/lib*/libcrypto.so.*:
+      /usr/lib*/libssl.so.*:
+      /usr/lib*/ossl-modules/legacy.so:
 
   copyright:
     contents:
-      /usr/share/doc/libssl3t64/copyright:
+      /usr/share/licenses/openssl-libs/LICENSE.txt:

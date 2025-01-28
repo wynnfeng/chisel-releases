@@ -1,0 +1,20 @@
+package: audit-libs
+
+essential:
+  - audit-libs_copyright
+
+slices:
+  config:
+    contents:
+      /etc/libaudit.conf:
+
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libaudit.so.1*:
+      /usr/lib*/libauparse.so*:
+
+  copyright:
+    contents:
+      /usr/share/licenses/audit-libs/COPYING.LIB:

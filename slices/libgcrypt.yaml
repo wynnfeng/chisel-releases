@@ -1,0 +1,19 @@
+package: libgcrypt
+
+essential:
+  - libgcrypt_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+      - libgpg-error_libs
+    contents:
+      /usr/lib*/libgcrypt.so*:
+  etc:
+    contents:
+      /etc/gcrypt:
+  copyright:
+    contents:
+      /usr/share/licenses/libgcrypt/COPYING.LIB:
+

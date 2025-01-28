@@ -1,0 +1,16 @@
+package: mpfr
+
+essential:
+  - mpfr_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+      - gmp_libs
+    contents:
+      /usr/lib*/libmpfr.so.6*:
+
+  copyright:
+    contents:
+      /usr/share/licenses/mpfr/COPYING:

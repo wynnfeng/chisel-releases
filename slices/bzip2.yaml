@@ -1,0 +1,38 @@
+package: bzip2
+
+essential:
+  - bzip2_copyright
+
+slices:
+  bins:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/bin/bunzip2:
+      /usr/bin/bzcat:
+      /usr/bin/bzip2:
+      /usr/bin/bzip2recover:
+
+  scripts:
+    essential:
+      - filesystem_bin
+      - filesystem_tmp
+      - bzip2_bins
+      - coreutils_bins
+      - diffutils_bins
+      - grep_bins
+      - less_bins
+      - sed_bins
+      - util-linux_file-manipulation
+    contents:
+      /usr/bin/bzcmp:
+      /usr/bin/bzdiff:
+      /usr/bin/bzegrep:
+      /usr/bin/bzfgrep:
+      /usr/bin/bzgrep:
+      /usr/bin/bzless:
+      /usr/bin/bzmore:
+  copyright:
+    contents:
+      /usr/share/licenses/bzip2/LICENSE:
+

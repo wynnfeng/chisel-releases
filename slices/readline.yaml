@@ -1,0 +1,17 @@
+package: readline
+
+essential:
+  - readline_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+      - ncurses-libs_libs
+    contents:
+      /usr/lib*/libhistory.so.8*:
+      /usr/lib*/libreadline.so.8*:
+
+  copyright:
+    contents:
+      /usr/share/licenses/readline/COPYING:

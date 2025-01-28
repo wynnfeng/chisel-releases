@@ -1,0 +1,16 @@
+package: lz4-libs
+
+essential:
+  - lz4-libs_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/liblz4.so*:
+
+  copyright:
+    contents:
+      /usr/share/doc/lz4-libs/LICENSE:
+

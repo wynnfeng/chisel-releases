@@ -1,0 +1,16 @@
+package: libdb
+
+essential:
+  - libdb_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libdb-5.3.so:
+      /usr/lib64/libdb-5.so:
+
+  copyright:
+    contents:
+      /usr/share/licenses/libdb/LICENSE:

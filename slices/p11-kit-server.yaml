@@ -1,0 +1,19 @@
+package: p11-kit-server
+
+slices:
+  bins:
+    essential:
+      - glibc_libs
+      - p11-kit_libs
+      - libtasn1_libs
+      - p11-kit-trust_config
+    contents:
+      /usr/libexec/p11-kit/p11-kit-server:
+  libs:
+    essential:
+      - glibc_libs
+      - libffi_libs
+      - p11-kit_libs
+      - libtasn1_libs
+    contents:
+      /usr/lib64/pkcs11/p11-kit-client.so:

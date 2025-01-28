@@ -1,0 +1,9 @@
+package: ncurses-libs
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libtic.so.6*:
+      /usr/lib*/libtinfo.so.6*:

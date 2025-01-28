@@ -1,0 +1,32 @@
+package: gawk
+
+essential:
+  - gawk_copyright
+
+slices:
+  bins:
+    essential:
+      - gawk_libs
+    contents:
+      # user should manually link /usr/bin/gawk to /usr/bin/awk
+      /usr/bin/gawk:
+      /usr/bin/awk:
+      /usr/libexec/awk/grcat:
+      /usr/libexec/awk/pwcat:
+  config:
+    contents:
+      /etc/profile.d/gawk.csh:
+      /etc/profile.d/gawk.sh:
+  libs:
+    essential:
+      - glibc_libs
+      - gmp_libs
+      - mpfr_libs
+      - readline_libs
+      - libsigsegv_libs
+    contents:
+      /usr/lib*/gawk/*.so:
+
+  copyright:
+    contents:
+      /usr/share/licenses/gawk/COPYING:

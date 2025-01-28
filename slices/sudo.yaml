@@ -1,0 +1,44 @@
+package: sudo
+
+essential:
+  - sudo_copyright
+
+slices:
+  bins:
+    essential:
+      - zlib_libs
+      - glibc_libs
+      - sudo_libs
+      - openssl-libs_libs
+      - pcre2_libs
+      - libcap-ng_libs
+      - libselinux_libs
+      - audit-libs_libs
+    contents:
+      /usr/bin/cvtsudoers:
+      /usr/bin/sudo:
+      /usr/bin/sudoedit:
+      /usr/bin/sudoreplay:
+      /usr/libexec/sudo/sesh:
+      /usr/sbin/visudo:
+
+  config:
+    contents:
+      /etc/pam.d/sudo:
+      /etc/pam.d/sudo-i:
+      /etc/sudo.conf:
+      /etc/sudoers:
+      /usr/lib/tmpfiles.d/sudo.conf:
+
+  libs:
+    contents:
+      /usr/libexec/sudo/audit_json.so:
+      /usr/libexec/sudo/group_file.so:
+      /usr/libexec/sudo/libsudo_util.so*:
+      /usr/libexec/sudo/sudo_noexec.so:
+      /usr/libexec/sudo/sudoers.so:
+      /usr/libexec/sudo/system_group.so:
+
+  copyright:
+    contents:
+      /usr/share/licenses/sudo/LICENSE.md:

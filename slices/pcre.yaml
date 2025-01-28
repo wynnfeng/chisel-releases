@@ -1,0 +1,17 @@
+package: pcre
+
+essential:
+  - pcre_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib64/libpcre.so*:
+      /usr/lib64/libpcreposix.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/pcre/COPYING:
+      /usr/share/licenses/pcre/LICENCE:
+

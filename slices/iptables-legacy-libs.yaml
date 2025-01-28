@@ -1,0 +1,13 @@
+package: 	iptables-legacy-libs
+
+essential:
+  - iptables-legacy_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+      - libpcap_libs
+    contents:
+      /usr/lib*/libip4tc.so*:
+      /usr/lib*/libip6tc.so*:

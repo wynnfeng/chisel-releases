@@ -1,0 +1,8 @@
+package: libacl
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libacl.so.1*:

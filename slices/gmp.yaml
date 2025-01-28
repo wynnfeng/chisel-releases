@@ -1,0 +1,15 @@
+package: gmp
+
+essential:
+  - gmp_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libgmp.so.10*:
+
+  copyright:
+    contents:
+      /usr/share/licenses/gmp/COPYING:

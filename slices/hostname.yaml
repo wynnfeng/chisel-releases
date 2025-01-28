@@ -1,0 +1,20 @@
+package: hostname
+
+essential:
+  - hostname_copyright
+
+slices:
+  bin:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/bin/dnsdomainname:
+      /usr/bin/domainname:
+      /usr/bin/hostname:
+      /usr/bin/nisdomainname:
+      /usr/bin/ypdomainname:
+
+  copyright:
+    contents:
+      /usr/share/licenses/hostname/COPYRIGHT:
+      /usr/share/licenses/hostname/gpl-2.0.txt:

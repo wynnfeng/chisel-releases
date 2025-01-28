@@ -1,0 +1,24 @@
+package: uuidd
+
+essential:
+  - uuidd_copyright
+
+slices:
+  sbin:
+    essential:
+      - glibc_libs
+      - libzstd_libs
+      - libgcc_libs
+      - lz4-libs_libs
+      - libgcrypt_libs
+      - libuuid_libs
+      - systemd-libs_libs
+      - libcap_libs
+      - xz-libs_libs
+      - libgpg-error_libs
+    contents:
+      /usr/sbin/uuidd:
+  copyright:
+    contents:
+      /usr/share/licenses/uuidd/COPYING.GPL-2.0-or-later:
+

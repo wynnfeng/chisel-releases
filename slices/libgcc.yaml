@@ -1,0 +1,15 @@
+package: libgcc
+
+essential:
+  - libgcc_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /lib*/libgcc_s*:
+
+  copyright:
+    contents:
+      /usr/share/licenses/libgcc/COPYING:

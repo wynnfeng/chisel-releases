@@ -1,0 +1,52 @@
+project: chisel-releases
+
+path: /chisel-releases
+
+environment:
+  PROJECT_PATH: /chisel-releases
+  RELEASE: opencloudos-stream-23
+  SHARED_LIBRARIES: $PROJECT_PATH/tests/spread/lib
+  PATH: /usr/local/bin:/usr/bin:/bin:$PATH:$SHARED_LIBRARIES
+
+exclude:
+  - .github
+
+backends:
+  docker:
+    type: adhoc
+    allocate: |
+      echo "Allocating $SPREAD_SYSTEM..."
+      docker_image=tencentos4-minimal-chisel:latest
+      sudo docker run --rm -e pass=$SPREAD_SYSTEM_PASSWORD --name $SPREAD_SYSTEM -d $docker_image sh -c '
+        set -x
+        dnf update -y
+        dnf install -y openssh-server sudo procps-ng
+        mkdir /run/sshd
+        echo "root:$pass" | chpasswd
+        echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+        ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key -N ""
+        chmod 600 /etc/ssh/ssh_host_*_key
+        chmod 644 /etc/ssh/ssh_host_*_key.pub
+        /usr/sbin/sshd -D
+      '
+      # The container will be up really fast, but the CMD might take time to
+      # run, and Spread will timeout the SSH op after 5 min. So we wait for the
+      # container during the allocation script.
+      until sudo docker exec $SPREAD_SYSTEM pgrep sshd
+      do
+        sleep 5
+      done
+      ADDRESS `sudo docker inspect $SPREAD_SYSTEM --format '{{.NetworkSettings.Networks.bridge.IPAddress}}'`
+    discard: sudo docker rm -f $SPREAD_SYSTEM
+    systems:
+      - tencentos-amd64:
+          password: tencentos
+
+prepare: |
+  dnf install -y curl wget
+
+prepare-each: chisel version
+
+suites:
+  tests/spread/integration/:
+    summary: Tests common scenarios

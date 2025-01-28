@@ -1,0 +1,22 @@
+package: grep
+
+essential:
+  - grep_copyright
+
+slices:
+  etc:
+    contents:
+      /etc/grep-color.conf:
+      /etc/profile.d/grep-color.sh:
+  bins:
+    essential:
+      - glibc_libs
+      - pcre_libs
+    contents:
+      /usr/bin/egrep:
+      /usr/bin/fgrep:
+      /usr/bin/grep:
+  copyright:
+    contents:
+      /usr/share/licenses/grep/COPYING:
+

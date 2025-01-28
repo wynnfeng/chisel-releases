@@ -1,0 +1,8 @@
+package: libatomic
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libatomic.so.1*:

@@ -1,0 +1,15 @@
+package: crypto-policies
+
+essential:
+  - crypto-policies_copyright
+
+slices:
+  openssl:
+    contents:
+      /usr/share/crypto-policies/back-ends/DEFAULT/openssl.config:
+      /usr/share/crypto-policies/back-ends/DEFAULT/opensslcnf.config:
+
+
+  copyright:
+    contents:
+      /usr/share/licenses/crypto-policies/COPYING.LESSER:

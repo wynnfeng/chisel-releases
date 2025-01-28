@@ -1,0 +1,15 @@
+package: libsigsegv
+
+essential:
+  - libsigsegv_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libsigsegv.so.2*:
+
+  copyright:
+    contents:
+      /usr/share/licenses/libsigsegv/COPYING:
