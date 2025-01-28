@@ -1,0 +1,75 @@
+package: filesystem
+
+essential:
+  - filesystem_copyright
+
+slices:
+  base:
+    essential:
+      - filesystem_bin
+      - filesystem_etc
+      - filesystem_home
+      - filesystem_lib
+      - filesystem_tmp
+      - filesystem_var
+
+  etc:
+    contents:
+      /etc/:
+
+  bin:
+    contents:
+      /bin:
+      /sbin:
+      /usr/bin/:
+      /usr/sbin/:
+
+  lib:
+    contents:
+      /lib:
+      /lib64: {arch: [amd64, ppc64el]}
+      /usr/lib/:
+      /usr/lib64/: {arch: [amd64, ppc64el]}
+
+  tmp:
+    contents:
+      /tmp/:
+
+  var:
+    contents:
+      /run/:
+      /var/cache/:
+      /var/lib/:
+      /var/log/:
+      # The /var/run symlink is enforced by the package's maintainer scripts
+      /var/run/: {symlink: /run}
+      /var/tmp/:
+
+  home:
+    contents:
+      /home/:
+      /root/:
+
+  release-info:
+    essential:
+      - filesystem_etc
+      - filesystem_lib
+    contents:
+      /etc/opencloudos-stream-release:
+      /etc/host.conf:
+      /etc/issue:
+      /etc/issue.net:
+      /etc/opencloudos-stream-release:
+      /etc/os-release:
+      /usr/lib/os-release:
+
+  # Dedicated slice for generating the Chisel manifest.
+  chisel:
+    essential:
+      - filesystem_var
+    contents:
+      /var/lib/chisel/**: {generate: manifest}
+
+  copyright:
+    contents:
+      /usr/share/doc/filesystem/copyright:

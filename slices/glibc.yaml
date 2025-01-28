@@ -1,0 +1,47 @@
+package: glibc
+
+essential:
+  - glibc_copyright
+
+slices:
+  config:
+    contents:
+      /etc/ld.so.conf.d/*.conf:
+
+  libs:
+    essential:
+      # Although not declared as a dependency in the libc6 deb, base-files is
+      # an essential package assumed to already exist as a core part of the distro.
+      # In this case, libc6 clearly depends on the library paths set by base-files
+      # and as such, we create this explicit dependency between the two slices.
+      # Ref: https://github.com/canonical/chisel-releases/pull/171
+      - filesystem_lib
+    contents:
+      /usr/lib*/ld*.so.*:
+      /usr/lib*/libBrokenLocale.so.*:
+      /usr/lib*/libanl.so.*:
+      /usr/lib*/libc.so.*:
+      /usr/lib*/libc_malloc_debug.so.*:
+      /usr/lib*/libdl.so.*:
+      /usr/lib*/libm.so.*:
+      /usr/lib*/libmemusage.so:
+      /usr/lib*/libmvec.so.*: {arch: [amd64, arm64]}
+      /usr/lib*/libnsl.so.1:
+      /usr/lib*/libnss_compat.so.*:
+      /usr/lib*/libnss_dns.so.*:
+      /usr/lib*/libnss_files.so.*:
+      #/usr/lib*/libnss_hesiod.so.*:
+      /usr/lib*/libpcprofile.so:
+      /usr/lib*/libpthread.so.*:
+      /usr/lib*/libresolv.so.*:
+      /usr/lib*/librt.so.*:
+      /usr/lib*/libthread_db.so.*:
+      /usr/lib*/libutil.so.*:
+
+  gconv:
+    contents:
+      /usr/lib*/gconv/**:
+
+  copyright:
+    contents:
+      /usr/share/licenses/glibc/**:

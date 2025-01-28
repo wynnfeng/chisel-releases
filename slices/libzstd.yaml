@@ -1,0 +1,15 @@
+package: libzstd
+
+essential:
+  - libzstd_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libzstd.so.1*:
+
+  copyright:
+    contents:
+      /usr/share/licenses/libzstd/COPYING:

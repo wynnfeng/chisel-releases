@@ -1,0 +1,15 @@
+package: zlib
+
+essential:
+  - zlib_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libz.so.*:
+
+  copyright:
+    contents:
+      /usr/share/licenses/zlib/README:
