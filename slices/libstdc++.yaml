@@ -1,0 +1,12 @@
+package: libstdc++
+essential:
+  - libstdc++_copyright
+slices:
+  libs:
+    essential:
+      - glibc_libs
+      - libgcc_libs
+    contents:
+      /usr/lib64/libstdc++.so.*:
+  copyright:
+    contents:

@@ -1,0 +1,12 @@
+package: tini
+essential:
+  - tini_copyright
+slices:
+  bins:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/bin/tini:
+  copyright:
+    contents:
+      /usr/share/licenses/tini/LICENSE:

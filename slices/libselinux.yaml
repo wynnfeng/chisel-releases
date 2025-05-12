@@ -9,7 +9,7 @@ slices:
       - glibc_libs
       - pcre2_libs
     contents:
-      /usr/lib*/libselinux.so.1:
+      /usr/lib*/libselinux.so*:
 
   copyright:
     contents:

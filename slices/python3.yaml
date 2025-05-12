@@ -1,0 +1,40 @@
+package: python3
+# The parts in this download have been grouped with inspiration from the
+# Python 3.11 Standard Library
+# (https://docs.python.org/3.11/library/index.html).
+#
+# Aside from the "core" parts which contains the minimal libraries that
+# should come from this download and the "extra" parts which contains
+# miscellaneous libraries, all the other parts definitions are sorted by
+# their names. The "core" parts is placed at the very beginning and the
+# "extra" parts at the very end.
+slices:
+  # The "core" parts provides a very minimal, yet functioning python3.11.
+  # It includes very few modules from the python3_stdlib download.
+  core:
+    essential:
+      - python3-libs_stdlib
+      - mailcap_data
+      - python3_bins
+
+  standard:
+    essential:
+      - python3-libs_standard
+      - python3_core
+  bins:
+    essential:
+      - glibc_libs
+      - expat_libs
+      - zlib_libs
+      - python3-libs_minimal
+    contents:
+      /usr/bin/python3:
+      /usr/bin/python3.11:
+  utils:
+    essential:
+      - python3_core
+      - python3-libs_pydoc
+      - python3-libs_utils
+    contents:
+      /usr/bin/pydoc3.11:
+      /usr/bin/pydoc3:

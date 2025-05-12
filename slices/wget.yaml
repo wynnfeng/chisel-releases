@@ -1,0 +1,32 @@
+package: wget
+essential:
+  - wget_copyright
+slices:
+  etc:
+    contents:
+      /etc/wgetrc:
+  bins:
+    essential:
+      - gpgme_libs
+      - libmetalink_libs
+      - libuuid_libs
+      - libpsl_libs
+      - libffi_libs
+      - gmp_libs
+      - pcre2_libs
+      - expat_libs
+      - nettle_libs
+      - glibc_libs
+      - p11-kit_libs
+      - libgpg-error_libs
+      - libtasn1_libs
+      - gnutls_libs
+      - libassuan_libs
+      - libunistring_libs
+      - libidn2_libs
+      - zlib_libs
+    contents:
+      /usr/bin/wget:
+  copyright:
+    contents:
+      /usr/share/licenses/wget/COPYING:

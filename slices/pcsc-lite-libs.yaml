@@ -1,0 +1,12 @@
+package: pcsc-lite-libs
+essential:
+  - pcsc-lite-libs_copyright
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib64/libpcsclite.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/pcsc-lite-libs/COPYING:

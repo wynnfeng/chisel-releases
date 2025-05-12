@@ -1,0 +1,14 @@
+package: libbrotli
+essential:
+  - libbrotli_copyright
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libbrotlicommon.so*:
+      /usr/lib*/libbrotlidec.so*:
+      /usr/lib*/libbrotlienc.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/libbrotli/LICENSE:

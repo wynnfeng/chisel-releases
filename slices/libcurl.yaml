@@ -1,0 +1,29 @@
+package: libcurl
+essential:
+  - libcurl_copyright
+slices:
+  libs:
+    essential:
+      - libevent_libs
+      - krb5-libs_libs
+      - libpsl_libs
+      - openssl-libs_libs
+      - libxcrypt_libs
+      - keyutils-libs_libs
+      - pcre2_libs
+      - cyrus-sasl-lib_libs
+      - libnghttp2_libs
+      - glibc_libs
+      - libbrotli_libs
+      - libssh_libs
+      - libunistring_libs
+      - libidn2_libs
+      - zlib_libs
+      - libcom_err_libs
+      - libselinux_libs
+      - openldap_libs
+    contents:
+      /usr/lib64/libcurl.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/libcurl/COPYING:

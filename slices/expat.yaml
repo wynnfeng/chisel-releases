@@ -1,0 +1,18 @@
+package: expat
+essential:
+  - expat_copyright
+slices:
+  bins:
+    essential:
+      - expat_libs
+      - glibc_libs
+    contents:
+      /usr/bin/xmlwf:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib64/libexpat.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/expat/COPYING:

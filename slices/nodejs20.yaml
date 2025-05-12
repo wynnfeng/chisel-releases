@@ -1,0 +1,18 @@
+package: nodejs20
+essential:
+  - nodejs20_copyright
+slices:
+  bins:
+    essential:
+      - openssl-libs_libs
+      - libstdc++_libs
+      - glibc_libs
+      - nodejs20-libs_libs
+      - libuv_libs
+      - libbrotli_libs
+      - zlib_libs
+      - libgcc_libs
+    contents:
+      /usr/bin/node-20:
+  copyright:
+    contents:

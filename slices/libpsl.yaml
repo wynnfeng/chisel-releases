@@ -1,0 +1,14 @@
+package: libpsl
+essential:
+  - libpsl_copyright
+slices:
+  libs:
+    essential:
+      - glibc_libs
+      - libunistring_libs
+      - libidn2_libs
+    contents:
+      /usr/lib64/libpsl.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/libpsl/COPYING:

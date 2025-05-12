@@ -1,0 +1,53 @@
+package: procps-ng
+essential:
+  - procps-ng_copyright
+slices:
+  libs:
+    essential:
+      - xz-libs_libs
+      - libgcrypt_libs
+      - lz4-libs_libs
+      - glibc_libs
+      - libcap_libs
+      - libzstd_libs
+      - libgpg-error_libs
+      - systemd-libs_libs
+      - libgcc_libs
+    contents:
+      /usr/lib64/libproc2.so*:
+  bins:
+    essential:
+      - xz-libs_libs
+      - procps-ng_libs
+      - libgcrypt_libs
+      - lz4-libs_libs
+      - glibc_libs
+      - libcap_libs
+      - libzstd_libs
+      - libgpg-error_libs
+      - ncurses-libs_libs
+      - systemd-libs_libs
+      - libgcc_libs
+    contents:
+      /usr/bin/free:
+      /usr/bin/pgrep:
+      /usr/bin/pidof:
+      /usr/bin/pidwait:
+      /usr/bin/pkill:
+      /usr/bin/pmap:
+      /usr/bin/ps:
+      /usr/bin/pwdx:
+      /usr/bin/skill:
+      /usr/bin/slabtop:
+      /usr/bin/snice:
+      /usr/bin/tload:
+      /usr/bin/top:
+      /usr/bin/uptime:
+      /usr/bin/vmstat:
+      /usr/bin/w:
+      /usr/bin/watch:
+      /usr/sbin/pidof:
+      /usr/sbin/sysctl:
+  copyright:
+    contents:
+      /usr/share/licenses/procps-ng/COPYING:

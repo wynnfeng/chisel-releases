@@ -1,0 +1,12 @@
+package: libunistring
+essential:
+  - libunistring_copyright
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib64/libunistring.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/libunistring/COPYING:

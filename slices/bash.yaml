@@ -20,8 +20,6 @@ slices:
       /usr/bin/bash: 
       /usr/bin/bashbug:
       /usr/bin/sh:
-      /bin/sh: {symlink: /usr/bin/sh}
-      /bin/bash: {symlink: /usr/bin/bash}
 
   copyright:
     contents:

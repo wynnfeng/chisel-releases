@@ -1,0 +1,13 @@
+package: gzip
+essential:
+  - gzip_copyright
+slices:
+  bins:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/bin/gzip:
+      /usr/bin/zless:
+  copyright:
+    contents:
+      /usr/share/licenses/gzip/COPYING:

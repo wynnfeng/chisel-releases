@@ -1,0 +1,12 @@
+package: libuv
+essential:
+  - libuv_copyright
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib64/libuv.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/libuv/LICENSE:

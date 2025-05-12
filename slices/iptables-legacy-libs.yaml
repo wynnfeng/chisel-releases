@@ -1,4 +1,4 @@
-package: 	iptables-legacy-libs
+package: iptables-legacy-libs
 
 essential:
   - iptables-legacy_copyright

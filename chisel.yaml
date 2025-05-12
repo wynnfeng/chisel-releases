@@ -3,10 +3,21 @@ format: v1
 archives:
   opencloudos-stream:
     default: true
+    url: https://mirrors.opencloudos.tech/opencloudos-stream/releases
     version: 23
     components: [primary, filelists]
+    priority: 2
     suites: [BaseOS, AppStream]
     public-keys: [opencloudos-stream-archive-key]
+
+  opencloudos-stream-epol:
+    urls: https://mirrors.opencloudos.tech/epol
+    components: [primary, filelists]
+    suites: [Everything]
+    version: 9
+    priority: 1
+    public-keys: 
+      - opencloudos-stream-archive-key
 
 public-keys:
   opencloudos-stream-archive-key:

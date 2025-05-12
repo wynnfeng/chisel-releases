@@ -20,7 +20,6 @@ slices:
       - libffi_libs
     contents:
       /usr/lib*/libp11-kit.so.0*:
-      /usr/lib*/p11-kit-proxy.so:
   copyright:
     contents:
       /usr/share/licenses/p11-kit/COPYING:

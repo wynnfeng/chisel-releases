@@ -1,0 +1,23 @@
+package: libtirpc
+essential:
+  - libtirpc_copyright
+slices:
+  libs:
+    essential:
+      - krb5-libs_gssapi
+      - krb5-libs_libkrb5
+      - openssl-libs_libs
+      - keyutils-libs_libs
+      - pcre2_libs
+      - glibc_libs
+      - zlib_libs
+      - libcom_err_libs
+      - libselinux_libs
+    contents:
+      /lib64/libtirpc.so*:
+  config:
+    contents:
+      /etc/netconfig:
+  copyright:
+    contents:
+      /usr/share/licenses/libtirpc/COPYING:

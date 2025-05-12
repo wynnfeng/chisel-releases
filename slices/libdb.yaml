@@ -9,7 +9,6 @@ slices:
       - glibc_libs
     contents:
       /usr/lib*/libdb-5.3.so:
-      /usr/lib64/libdb-5.so:
 
   copyright:
     contents:

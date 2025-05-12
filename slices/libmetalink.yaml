@@ -1,0 +1,13 @@
+package: libmetalink
+essential:
+  - libmetalink_copyright
+slices:
+  libs:
+    essential:
+      - expat_libs
+      - glibc_libs
+    contents:
+      /usr/lib64/libmetalink.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/libmetalink/COPYING:

@@ -1,0 +1,18 @@
+package: tar
+essential:
+  - tar_copyright
+slices:
+  bins:
+    essential:
+      - pcre2_libs
+      - glibc_libs
+      - libattr_libs
+      - libselinux_libs
+      - libacl_libs
+      - gzip_bins
+    contents:
+      /usr/bin/gtar:
+      /usr/bin/tar:
+  copyright:
+    contents:
+      /usr/share/licenses/tar/COPYING:

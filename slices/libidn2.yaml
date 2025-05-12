@@ -1,0 +1,13 @@
+package: libidn2
+essential:
+  - libidn2_copyright
+slices:
+  libs:
+    essential:
+      - glibc_libs
+      - libunistring_libs
+    contents:
+      /usr/lib64/libidn2.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/libidn2/COPYING:
