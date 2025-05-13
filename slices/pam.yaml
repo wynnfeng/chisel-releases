@@ -1,0 +1,72 @@
+package: pam
+
+essential:
+  - pam_copyright
+
+slices:
+  libs:
+    essential:
+      - audit-libs_libs
+      - glibc_libs
+    contents:
+      /usr/lib*/libpam.so.0*:
+      /usr/lib*/libpam_misc.so.0*:
+      /usr/lib*/libpamc.so.0*:
+
+  libsecurity:
+    essential:
+      - audit-libs_libs
+      - glibc_libs
+      - libxcrypt_libs
+      - libdb_libs
+      - pam_libs
+      - libselinux_libs
+      - systemd-libs_libs
+    contents:
+      /usr/lib*/security/pam_access.so:
+      /usr/lib*/security/pam_debug.so:
+      /usr/lib*/security/pam_deny.so:
+      /usr/lib*/security/pam_echo.so:
+      /usr/lib*/security/pam_env.so:
+      /usr/lib*/security/pam_exec.so:
+      /usr/lib*/security/pam_extrausers.so:
+      /usr/lib*/security/pam_faildelay.so:
+      /usr/lib*/security/pam_faillock.so:
+      /usr/lib*/security/pam_filter.so:
+      /usr/lib*/security/pam_ftp.so:
+      /usr/lib*/security/pam_group.so:
+      /usr/lib*/security/pam_issue.so:
+      /usr/lib*/security/pam_keyinit.so:
+      /usr/lib*/security/pam_limits.so:
+      /usr/lib*/security/pam_listfile.so:
+      /usr/lib*/security/pam_localuser.so:
+      /usr/lib*/security/pam_loginuid.so:
+      /usr/lib*/security/pam_mail.so:
+      /usr/lib*/security/pam_mkhomedir.so:
+      /usr/lib*/security/pam_motd.so:
+      /usr/lib*/security/pam_namespace.so:
+      /usr/lib*/security/pam_nologin.so:
+      /usr/lib*/security/pam_permit.so:
+      /usr/lib*/security/pam_pwhistory.so:
+      /usr/lib*/security/pam_rhosts.so:
+      /usr/lib*/security/pam_rootok.so:
+      /usr/lib*/security/pam_securetty.so:
+      /usr/lib*/security/pam_selinux.so:
+      /usr/lib*/security/pam_sepermit.so:
+      /usr/lib*/security/pam_setquota.so:
+      /usr/lib*/security/pam_shells.so:
+      /usr/lib*/security/pam_stress.so:
+      /usr/lib*/security/pam_succeed_if.so:
+      /usr/lib*/security/pam_time.so:
+      /usr/lib*/security/pam_timestamp.so:
+      /usr/lib*/security/pam_tty_audit.so:
+      /usr/lib*/security/pam_umask.so:
+      /usr/lib*/security/pam_unix.so:
+      /usr/lib*/security/pam_usertype.so:
+      /usr/lib*/security/pam_warn.so:
+      /usr/lib*/security/pam_wheel.so:
+      /usr/lib*/security/pam_xauth.so:
+
+  copyright:
+    contents:
+      /usr/share/licenses/pam/Copyright:

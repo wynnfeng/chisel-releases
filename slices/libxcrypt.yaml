@@ -1,0 +1,15 @@
+package: libxcrypt
+
+essential:
+  - libxcrypt_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libcrypt.so.*:
+
+  copyright:
+    contents:
+      /usr/share/licenses/libxcrypt/COPYING.LIB:

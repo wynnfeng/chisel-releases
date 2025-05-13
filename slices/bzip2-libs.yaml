@@ -1,0 +1,12 @@
+package: bzip2-libs
+essential:
+  - bzip2-libs_copyright
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib64/libbz2.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/bzip2-libs/LICENSE:

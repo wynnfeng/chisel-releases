@@ -1,0 +1,12 @@
+package: libyaml
+essential:
+  - libyaml_copyright
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib64/libyaml-0.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/libyaml/License:

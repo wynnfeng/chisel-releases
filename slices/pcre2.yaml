@@ -1,0 +1,9 @@
+package: pcre2
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libpcre2-8.so.0*:
+      /usr/lib*/libpcre2-posix.so.3*:

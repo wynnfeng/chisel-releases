@@ -1,0 +1,41 @@
+package: nss
+essential:
+  - nss_copyright
+slices:
+  libs:
+    essential:
+      - nss_libnss
+      - nss_smine
+      - nss_ssl
+  
+  libnss:
+    essential:
+      - nss-util_libs
+      - glibc_libs
+      - nspr_libs
+    contents:
+      /usr/lib64/libnss3.so:
+
+  smine:
+    essential:
+      - nss-util_libs
+      - glibc_libs
+      - nspr_libs
+      - nss_libnss
+    contents:
+      /usr/lib64/libsmime3.so:
+
+
+  ssl:
+    essential:
+      - nss-util_libs
+      - glibc_libs
+      - nspr_libs
+      - nss_libnss
+    contents:
+      /usr/lib64/libssl3.so:
+
+  
+  copyright:
+    contents:
+      /usr/share/licenses/nss/COPYING:

@@ -1,0 +1,16 @@
+package: bc
+
+essential:
+  - bc_copyright
+
+slices:
+  bins:
+    essential:
+      - glibc_libs
+      - readline_libs
+    contents:
+      /usr/bin/bc:
+
+  copyright:
+    contents:
+      /usr/share/licenses/bc/COPYING:

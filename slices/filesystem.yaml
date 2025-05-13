@@ -2,6 +2,7 @@ package: filesystem
 
 essential:
   - filesystem_copyright
+  - tencentos-release_etc
 
 slices:
   base:
@@ -9,7 +10,7 @@ slices:
       - filesystem_bin
       - filesystem_etc
       - filesystem_home
-      - filesystem_lib
+      - filesystem_libs
       - filesystem_tmp
       - filesystem_var
 
@@ -19,17 +20,17 @@ slices:
 
   bin:
     contents:
-      /bin:
-      /sbin:
       /usr/bin/:
       /usr/sbin/:
+      /bin/:
+      /sbin/:
 
-  lib:
+  libs:
     contents:
-      /lib:
-      /lib64: {arch: [amd64, ppc64el]}
       /usr/lib/:
-      /usr/lib64/: {arch: [amd64, ppc64el]}
+      /usr/lib64/: {arch: [x86_64, aarch64]}
+      /lib64/:
+      /lib/:
 
   tmp:
     contents:
@@ -50,26 +51,6 @@ slices:
       /home/:
       /root/:
 
-  release-info:
-    essential:
-      - filesystem_etc
-      - filesystem_lib
-    contents:
-      /etc/opencloudos-stream-release:
-      /etc/host.conf:
-      /etc/issue:
-      /etc/issue.net:
-      /etc/opencloudos-stream-release:
-      /etc/os-release:
-      /usr/lib/os-release:
-
-  # Dedicated slice for generating the Chisel manifest.
-  chisel:
-    essential:
-      - filesystem_var
-    contents:
-      /var/lib/chisel/**: {generate: manifest}
-
   copyright:
     contents:
-      /usr/share/doc/filesystem/copyright:
+      /usr/share/licenses/:

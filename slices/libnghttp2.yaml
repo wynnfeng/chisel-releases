@@ -1,0 +1,12 @@
+package: libnghttp2
+essential:
+  - libnghttp2_copyright
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib64/libnghttp2.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/libnghttp2/COPYING:

@@ -1,0 +1,22 @@
+package: ncurses-libs
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libtic.so.6*:
+      /usr/lib*/libtinfo.so.6*:
+  libncursesw6:
+    essential:
+      - glibc_libs
+      - ncurses-libs_libs
+    contents:
+      /usr/lib64/libncurses.so.*:
+      /usr/lib64/libncursesw.so.*:
+      /usr/lib64/libform.so.*:
+      /usr/lib64/libformw.so.*:
+      /usr/lib64/libmenu.so.*:
+      /usr/lib64/libmenuw.so.*:
+      /usr/lib64/libpanel.so.*:
+      /usr/lib64/libpanelw.so.*:

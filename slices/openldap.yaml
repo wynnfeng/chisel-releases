@@ -1,0 +1,19 @@
+package: openldap
+essential:
+  - openldap_copyright
+slices:
+  libs:
+    essential:
+      - libevent_libs
+      - openssl-libs_libs
+      - libxcrypt_libs
+      - cyrus-sasl-lib_libs
+      - glibc_libs
+      - zlib_libs
+    contents:
+      /usr/lib64/liblber.so*:
+      /usr/lib64/libldap.so*:
+      /usr/lib64/libslapi.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/openldap/COPYRIGHT:

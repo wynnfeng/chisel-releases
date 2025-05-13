@@ -1,0 +1,16 @@
+package: tencentos-release
+essential:
+  - tencentos-release_copyright
+slices:
+  etc:
+    contents:
+      /etc/system-release:
+      /etc/os-release:
+      /etc/tencentos-release: { mutable: true }
+    mutate: |
+      sr = content.read("/etc/tencentos-release")
+      sr = sr.strip() + " chisel\n"
+      content.write("/etc/tencentos-release", sr)
+  copyright:
+    contents:
+      /usr/share/licenses/tencentos-release/LICENSE:

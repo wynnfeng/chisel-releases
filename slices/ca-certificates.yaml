@@ -1,0 +1,34 @@
+package: ca-certificates
+
+slices:
+  data:
+    # essential:
+      # - ca-certificates_bins
+      # - p11-kit_bins
+    contents:
+      /etc/pki/ca-trust/ca-legacy.conf:
+      /etc/pki/ca-trust/extracted/:
+      /etc/ssl/openssl.cnf:
+      /etc/pki/ca-trust/source/anchors:
+      /etc/pki/ca-trust/source/blacklist:
+      /etc/pki/ca-trust/source/blocklist:
+      /etc/pki/tls/cert.pem:
+      /etc/pki/tls/certs/ca-bundle.crt:
+      /etc/pki/tls/certs/ca-bundle.trust.crt:
+      /etc/ssl/cert.pem:
+      /usr/share/pki/ca-trust-legacy/**:
+  bins:
+    essential:
+        - filesystem_bin
+        - filesystem_tmp
+        # Manually linking /bin/sh to /bin/bash is required as /bin/sh is hardcoded in
+        # the shebang of the script.
+        # See https://github.com/canonical/chisel-releases/pull/61#discussion_r1326873419
+        - bash_bins
+        - coreutils_bins
+        - findutils_bins
+        - sed_bins
+    contents:
+      /usr/bin/update-ca-trust:
+      /usr/bin/ca-legacy:
+

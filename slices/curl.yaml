@@ -1,0 +1,25 @@
+package: curl
+slices:
+  bins:
+    essential:
+      - libevent_libs
+      - krb5-libs_libs
+      - libpsl_libs
+      - openssl-libs_libs
+      - libxcrypt_libs
+      - keyutils-libs_libs
+      - pcre2_libs
+      - cyrus-sasl-lib_libs
+      - libnghttp2_libs
+      - glibc_libs
+      - libbrotli_libs
+      - libssh_libs
+      - libunistring_libs
+      - libidn2_libs
+      - libcurl_libs
+      - zlib_libs
+      - libcom_err_libs
+      - libselinux_libs
+      - openldap_libs
+    contents:
+      /usr/bin/curl:

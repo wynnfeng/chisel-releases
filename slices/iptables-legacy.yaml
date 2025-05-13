@@ -1,0 +1,30 @@
+package: iptables-legacy
+
+essential:
+  - iptables-legacy_copyright
+
+slices:
+  service:
+    contents:
+      /usr/lib*/systemd/system/ip6tables.service:
+      /usr/lib*/systemd/system/iptables.service:
+    
+  libexec:
+    contents:
+      /usr/libexec/initscripts/legacy-actions/ip6tables/**:
+      /usr/libexec/initscripts/legacy-actions/iptables/**:
+      /usr/libexec/iptables/**:
+
+  sbin:
+    contents:
+      /usr/sbin/ip6tables-legacy:
+      /usr/sbin/ip6tables-legacy-restore:
+      /usr/sbin/ip6tables-legacy-save:
+      /usr/sbin/iptables-legacy:
+      /usr/sbin/iptables-legacy-restore:
+      /usr/sbin/iptables-legacy-save:
+      /usr/sbin/xtables-legacy-multi:
+
+  copyright:
+    contents:
+      /usr/share/licenses/iptables-legacy/COPYING:

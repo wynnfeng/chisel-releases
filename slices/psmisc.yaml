@@ -1,0 +1,18 @@
+package: psmisc
+essential:
+  - psmisc_copyright
+slices:
+  bins:
+    essential:
+      - glibc_libs
+      - ncurses-libs_libs
+    contents:
+      /usr/bin/killall:
+      /usr/bin/peekfd:
+      /usr/bin/prtstat:
+      /usr/bin/pslog:
+      /usr/bin/pstree:
+      /usr/bin/pstree.x11:
+  copyright:
+    contents:
+      /usr/share/licenses/psmisc/COPYING:

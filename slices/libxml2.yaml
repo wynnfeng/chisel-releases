@@ -1,0 +1,14 @@
+package: libxml2
+essential:
+  - libxml2_copyright
+slices:
+  libs:
+    essential:
+      - xz-libs_libs
+      - glibc_libs
+      - zlib_libs
+    contents:
+      /usr/lib64/libxml2.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/libxml2/Copyright:

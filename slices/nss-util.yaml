@@ -1,0 +1,13 @@
+package: nss-util
+essential:
+  - nss-util_copyright
+slices:
+  libs:
+    essential:
+      - glibc_libs
+      - nspr_libs
+    contents:
+      /usr/lib64/libnssutil3.so:
+  copyright:
+    contents:
+      /usr/share/licenses/nss-util/COPYING:

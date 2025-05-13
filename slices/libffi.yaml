@@ -1,0 +1,15 @@
+package: libffi
+
+essential:
+  - libffi_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libffi.so.8*:
+
+  copyright:
+    contents:
+      /usr/share/licenses/libffi/LICENSE:

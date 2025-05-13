@@ -1,0 +1,83 @@
+package: util-linux-core
+
+essential:
+  - util-linux_copyright
+
+slices:
+  block-devices:
+    essential:
+      - libsmartcols_libs
+      - glibc_libs
+      - libblkid_libs
+    contents:
+      /usr/sbin/partx:
+      /usr/sbin/blkid:
+      /usr/sbin/blockdev:
+
+  file-manipulation:
+    essential:
+      - glibc_libs
+      - ncurses-libs_libs
+    contents:
+      /usr/bin/more:
+      /usr/bin/hardlink:
+  
+  file-system:
+    essential:
+      - libsmartcols_libs
+      - pcre2_libs
+      - libgcc_libs
+      - libmount_libs
+      - glibc_libs
+      - systemd-libs_libs
+      - libselinux_libs
+      - libcap_libs
+      - libblkid_libs
+    contents:
+      /usr/bin/findmnt:
+      /usr/bin/mountpoint:
+      /usr/sbin/fsck:
+      /usr/sbin/mkswap:
+      /usr/sbin/switch_root:
+  
+  ipc:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/bin/ipcmk:
+      /usr/bin/ipcrm:
+      /usr/bin/ipcs:
+  kernel:
+    essential:
+      - glibc_libs
+      - ncurses-libs_libs
+    contents:
+      /usr/bin/dmesg:
+  lock:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/bin/flock:
+  
+  namespace:
+    essential:
+      - pcre2_libs
+      - glibc_libs
+      - libselinux_libs
+    contents:
+      /usr/bin/nsenter:
+      /usr/bin/unshare:
+  process:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/bin/chrt:
+      /usr/bin/ionice:
+      /usr/bin/setsid:
+      /usr/bin/taskset:
+
+  tty:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/sbin/agetty:

@@ -1,0 +1,15 @@
+package: cpio
+
+essential:
+  - cpio_copyright
+
+slices:
+  bins:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/bin/cpio:
+
+  copyright:
+    contents:
+      /usr/share/licenses/cpio/COPYING:

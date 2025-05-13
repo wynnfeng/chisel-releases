@@ -1,0 +1,11 @@
+package: mailcap
+essential:
+  - mailcap_copyright
+slices:
+  data:
+    contents:
+      /etc/mailcap:
+      /etc/mime.types:
+  copyright:
+    contents:
+      /usr/share/licenses/mailcap/COPYING:

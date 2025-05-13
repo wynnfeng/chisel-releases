@@ -1,0 +1,19 @@
+package: cyrus-sasl-lib
+slices:
+  libs:
+    essential:
+      - gdbm-libs_libs
+      - libxcrypt_libs
+      - glibc_libs
+    contents:
+      /usr/lib64/libsasl2.so*:
+      /usr/lib64/sasl2/**:
+  sbins:
+    essential:
+      - gdbm-libs_libs
+      - libxcrypt_libs
+      - cyrus-sasl-lib_libs
+      - glibc_libs
+    contents:
+      /usr/sbin/sasldblistusers2:
+      /usr/sbin/saslpasswd2:

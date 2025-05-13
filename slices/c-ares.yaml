@@ -1,0 +1,12 @@
+package: c-ares
+essential:
+  - c-ares_copyright
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib64/libcares.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/c-ares/LICENSE.md:

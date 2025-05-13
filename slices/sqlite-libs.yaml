@@ -1,0 +1,8 @@
+package: sqlite-libs
+slices:
+  libs:
+    essential:
+      - glibc_libs
+      - zlib_libs
+    contents:
+      /usr/lib64/libsqlite3.so*:

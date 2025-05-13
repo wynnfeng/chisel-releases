@@ -1,0 +1,40 @@
+format: v1
+
+archives:
+  tencentos:
+    default: true
+    url: https://mirrors.tencent.com/tlinux
+    version: 4.4
+    components: [primary, filelists]
+    priority: 2
+    suites: [BaseOS, AppStream]
+    public-keys: [tencentos-archive-key]
+
+  tencentos-epol:
+    urls: http://mirrors.tencent.com/epol
+    components: [primary, filelists]
+    suites: [Everything]
+    version: 9
+    priority: 1
+    public-keys: 
+      - tencentos-archive-key
+
+public-keys:
+  tencentos-archive-key:
+    id: "46CDA83B7A8B60FD"
+    armor: |
+      -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+      mQINBGPgYV4BEACiL1vbAuXDSWA92uc7ZeNtmPpOKun1neOCPH+WTQ+/Mqp3KH5p
+      ITFa/7/G1vCNfU2jZT97xWvdKWHWDkouUB52Wg3IHagnjrOaEV6Lq0tZaeBffJ2L
+      FW+wp/eCyck7feRrQPrqzlg/e+itAgARXdy5XJqHqq2Xe4HHlZxklpf2TSU2pfmy
+      sh0/qRf4BrRO+hkeDzSBC1pbl0KI7dfQqE6SPfYO5MQANNa2Zd+6nhgetEYQjinR
+      VuQFZAp696L3phOqw8oJbyTs5YDfI7xV8N5ghFmK14psy7hSO8gHUsnKY1tVAtke
+      /uLpY7LzsYB75/LjZHaCY8mY9afVWSrNOzAPooljlNCIaWz5fDVyOUCq/y7uk+mH
+      5RwlOIHyriC8M7cSPn3au1+pFYTJ6Y7vR6TE5bRNPNzjGTtfeyHKNidgIMc8ckU5
+      UQ4Dq7EUnkrnq6o7kb1ioyd5VRSWwJaNUarAFLQn6nC7yEIFoZS3clL3s25WFMSW
+      QruP6o+kM/jMQnfh3Xqqj8OGYQvTtprFpXMPkHH/maccxGRFcRL5jkwcyL9EkNBB
+      lGDH6ty0wF2X95VEPJAA6Cf2OvPQiKRpEH+X2oUf2NaYLnaQ8Xn/8l9S3KeXzOWG
+      ZJWD0MWeYDd7wWFfFxO7AkjOU62Jme0biRLV0dLhI42hPVND3IlaWh8hOwARAQAB
+      =RACw
+      -----END PGP PUBLIC KEY BLOCK-----

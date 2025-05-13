@@ -1,0 +1,20 @@
+package: gnutls
+essential:
+  - gnutls_copyright
+slices:
+  libs:
+    essential:
+      - libffi_libs
+      - gmp_libs
+      - nettle_libs
+      - glibc_libs
+      - p11-kit_libs
+      - libtasn1_libs
+      - libunistring_libs
+      - libidn2_libs
+      - zlib_libs
+    contents:
+      /usr/lib64/libgnutls.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/gnutls/COPYING:

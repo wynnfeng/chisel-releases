@@ -6,7 +6,7 @@ essential:
 slices:
   config:
     contents:
-      /etc/ld.so.conf.d/*.conf:
+      /etc/ld.so.conf.d:
 
   libs:
     essential:
@@ -15,28 +15,28 @@ slices:
       # In this case, libc6 clearly depends on the library paths set by base-files
       # and as such, we create this explicit dependency between the two slices.
       # Ref: https://github.com/canonical/chisel-releases/pull/171
-      - filesystem_lib
+      - filesystem_libs
     contents:
-      /usr/lib*/ld*.so.*:
-      /usr/lib*/libBrokenLocale.so.*:
-      /usr/lib*/libanl.so.*:
-      /usr/lib*/libc.so.*:
-      /usr/lib*/libc_malloc_debug.so.*:
-      /usr/lib*/libdl.so.*:
-      /usr/lib*/libm.so.*:
+      /lib*/ld*.so.*:
+      /lib*/libBrokenLocale.so.*:
+      /lib*/libanl.so.*:
+      /lib*/libc.so.*:
+      /lib*/libc_malloc_debug.so.*:
+      /lib*/libdl.so.*:
+      /lib*/libm.so.*:
       /usr/lib*/libmemusage.so:
-      /usr/lib*/libmvec.so.*: {arch: [amd64, arm64]}
-      /usr/lib*/libnsl.so.1:
-      /usr/lib*/libnss_compat.so.*:
-      /usr/lib*/libnss_dns.so.*:
-      /usr/lib*/libnss_files.so.*:
-      #/usr/lib*/libnss_hesiod.so.*:
+      /lib*/libmvec.so.*: {arch: [x86_64, aarch64]}
+      /lib*/libnsl.so.1:
+      /lib*/libnss_compat.so.*:
+      /lib*/libnss_dns.so.*:
+      /lib*/libnss_files.so.*:
+      #/lib*/libnss_hesiod.so.*:
       /usr/lib*/libpcprofile.so:
-      /usr/lib*/libpthread.so.*:
-      /usr/lib*/libresolv.so.*:
-      /usr/lib*/librt.so.*:
-      /usr/lib*/libthread_db.so.*:
-      /usr/lib*/libutil.so.*:
+      /lib*/libpthread.so.*:
+      /lib*/libresolv.so.*:
+      /lib*/librt.so.*:
+      /lib*/libthread_db.so.*:
+      /lib*/libutil.so.*:
 
   gconv:
     contents:

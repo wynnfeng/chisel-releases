@@ -1,0 +1,22 @@
+package: gpgme
+essential:
+  - gpgme_copyright
+slices:
+  libs:
+    essential:
+      - glibc_libs
+      - libgpg-error_libs
+      - libassuan_libs
+    contents:
+      /usr/lib64/libgpgme.so*:
+  bins:
+    essential:
+      - gpgme_libs
+      - glibc_libs
+      - libgpg-error_libs
+      - libassuan_libs
+    contents:
+      /usr/bin/gpgme-json:
+  copyright:
+    contents:
+      /usr/share/licenses/gpgme/COPYING:

@@ -1,0 +1,20 @@
+package: libssh
+essential:
+  - libssh_copyright
+slices:
+  libs:
+    essential:
+      - krb5-libs_libs
+      - openssl-libs_libs
+      - keyutils-libs_libs
+      - pcre2_libs
+      - glibc_libs
+      - zlib_libs
+      - libcom_err_libs
+      - libselinux_libs
+    contents:
+      /usr/lib64/libssh.so*:
+      /usr/lib64/libssh_threads.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/libssh/COPYING:

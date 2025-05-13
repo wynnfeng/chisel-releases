@@ -1,0 +1,16 @@
+package: libcap
+
+essential:
+  - libcap_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libcap.so.2*:
+      /usr/lib*/libpsx.so.2*:
+
+  copyright:
+    contents:
+      /usr/share/licenses/libcap/License:

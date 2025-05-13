@@ -1,0 +1,13 @@
+package: gdbm-libs
+essential:
+  - gdbm-libs_copyright
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib64/libgdbm.so*:
+      /usr/lib64/libgdbm_compat.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/gdbm-libs/COPYING:

@@ -1,0 +1,32 @@
+package: cronie
+essential:
+  - cronie_copyright
+slices:
+  services:
+    contents:
+      /lib/systemd/system/crond.service:
+  config:
+    contents:
+      /etc/cron.d/0hourly:
+      /etc/cron.deny:
+      /etc/pam.d/crond:
+      /etc/sysconfig/crond:
+  bins:
+    essential:
+      - libcap-ng_libs
+      - pcre2_libs
+      - libeconf_libs
+      - glibc_libs
+      - pam_libs
+      - audit-libs_libs
+      - libselinux_libs
+    contents:
+      /usr/bin/cronnext:
+      /usr/bin/crontab:
+      /usr/sbin/crond:
+  var:
+    contents:
+      /var/spool/cron:
+  copyright:
+    contents:
+      /usr/share/licenses/cronie/COPYING:

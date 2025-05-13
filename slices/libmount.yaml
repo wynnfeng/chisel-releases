@@ -1,0 +1,17 @@
+package: libmount
+
+essential:
+  - libmount_copyright
+
+slices:
+  libs:
+    essential:
+      - libblkid_libs
+      - glibc_libs
+      - libselinux_libs
+    contents:
+      /usr/lib*/libmount.so.1*:
+
+  copyright:
+    contents:
+      /usr/share/licenses/libmount/COPYING:

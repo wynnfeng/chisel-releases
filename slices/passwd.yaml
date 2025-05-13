@@ -1,0 +1,29 @@
+package: passwd
+
+essential:
+  - passwd_copyright
+
+slices:
+  data:
+    essential:
+      - libffi_libs
+      - pcre2_libs
+      - popt_libs
+      - libcap-ng_libs
+      - glib2_libgmodule
+      - glib2_libgobject
+      - glibc_libs
+      - pam_libs
+      - libselinux_libs
+      - libxcrypt_libs
+      - libeconf_libs
+      - audit-libs_libs
+      - libuser_libs
+    contents:
+      /etc/pam.d/passwd:
+      /usr/bin/passwd:
+    
+
+  copyright:
+    contents:
+      /usr/share/licenses/passwd/COPYING:

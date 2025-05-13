@@ -1,0 +1,14 @@
+package: iptables-libs
+
+essential:
+  - iptables-libs_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib*/libxtables.so*:
+
+  copyright:
+    contents:

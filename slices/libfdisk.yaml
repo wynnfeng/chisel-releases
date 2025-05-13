@@ -1,0 +1,16 @@
+package: libfdisk
+
+essential:
+  - libfdisk_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib64/libfdisk.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/libfdisk/COPYING:
+      /usr/share/licenses/libfdisk/COPYING.LGPL-2.1-or-later:
+

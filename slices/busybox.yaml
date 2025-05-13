@@ -1,0 +1,15 @@
+package: busybox
+
+essential:
+  - busybox_copyright
+
+slices:
+  sbin:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/sbin/busybox:
+  copyright:
+    contents:
+      /usr/share/licenses/busybox/LICENSE:
+

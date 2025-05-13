@@ -1,0 +1,16 @@
+package: libsmartcols
+
+essential:
+  - libsmartcols_copyright
+
+slices:
+  libs:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/lib64/libsmartcols.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/libsmartcols/COPYING:
+      /usr/share/licenses/libsmartcols/COPYING.LGPL-2.1-or-later:
+

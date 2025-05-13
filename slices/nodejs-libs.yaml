@@ -1,0 +1,18 @@
+package: nodejs-libs
+essential:
+  - nodejs-libs_copyright
+slices:
+  libs:
+    essential:
+      - openssl-libs_libs
+      - libstdc++_libs
+      - glibc_libs
+      - libuv_libs
+      - libbrotli_libs
+      - zlib_libs
+      - libgcc_libs
+    contents:
+      /usr/lib64/libnode.so.108:
+  copyright:
+    contents:
+      /usr/share/licenses/nodejs-libs/LICENSE:

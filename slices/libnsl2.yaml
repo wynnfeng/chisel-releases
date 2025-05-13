@@ -1,0 +1,21 @@
+package: libnsl2
+essential:
+  - libnsl2_copyright
+slices:
+  libs:
+    essential:
+      - krb5-libs_gssapi
+      - krb5-libs_libkrb5
+      - openssl-libs_libs
+      - keyutils-libs_libs
+      - pcre2_libs
+      - glibc_libs
+      - zlib_libs
+      - libcom_err_libs
+      - libtirpc_libs
+      - libselinux_libs
+    contents:
+      /usr/lib64/libnsl.so.3.0.0:
+  copyright:
+    contents:
+      /usr/share/licenses/libnsl2/COPYING:

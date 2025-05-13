@@ -1,0 +1,14 @@
+package: nettle
+essential:
+  - nettle_copyright
+slices:
+  libs:
+    essential:
+      - gmp_libs
+      - glibc_libs
+    contents:
+      /usr/lib64/libhogweed.so*:
+      /usr/lib64/libnettle.so*:
+  copyright:
+    contents:
+      /usr/share/licenses/nettle/COPYING.LESSERv3:

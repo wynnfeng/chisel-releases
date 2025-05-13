@@ -1,0 +1,255 @@
+package: util-linux
+
+essential:
+  - util-linux_copyright
+
+slices:
+  bins:
+    essential:
+      - util-linux_block-devices
+      - util-linux_cli-helpers
+      - util-linux_cpu
+      - util-linux_ctrlaltdel
+      - util-linux_file-manipulation
+      - util-linux_file-system
+      - util-linux_ipc
+      - util-linux_kernel
+      - util-linux_login
+      - util-linux_mcookie
+      - util-linux_memory
+      - util-linux_namespace
+      - util-linux_pam-profiles
+      - util-linux_process
+      - util-linux_set-arch
+      - util-linux_su-support
+      - util-linux_timer
+      - util-linux_tty
+
+  block-devices:
+    essential:
+      - pcre2_libs
+      - glibc_libs
+      - libgcc_libs
+      - libmount_libs
+      - systemd-libs_libs
+      - libselinux_libs
+      - libcap_libs
+      - libblkid_libs
+      - libsmartcols_libs
+      - util-linux-core_block-devices
+    contents:
+      /usr/sbin/addpart:
+      /usr/sbin/delpart:
+      /usr/bin/lsblk:
+      /usr/sbin/resizepart:
+      /usr/sbin/blkdiscard:
+      /usr/sbin/blkzone:
+      /usr/sbin/zramctl:
+
+  cli-helpers:
+    essential:
+      - glibc_libs
+      - libselinux_libs
+      - pcre2_libs
+    contents:
+      /usr/bin/getopt:
+      /usr/bin/namei:
+      /usr/bin/rev:
+      /usr/bin/whereis:
+
+  cpu:
+    essential:
+      - glibc_libs
+      - libsmartcols_libs
+    contents:
+      /usr/bin/lscpu:
+      /usr/sbin/chcpu:
+
+  ctrlaltdel:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/sbin/ctrlaltdel:
+
+  file-manipulation:
+    essential:
+      - glibc_libs
+      - ncurses-libs_libs
+      - util-linux-core_file-manipulation
+    contents:
+      /usr/bin/fallocate:
+
+  file-system:
+    essential:
+      - libsmartcols_libs
+      - pcre2_libs
+      - libgcc_libs
+      - libmount_libs
+      - glibc_libs
+      - systemd-libs_libs
+      - libselinux_libs
+      - libcap_libs
+      - libblkid_libs
+      - zlib_libs
+      - libuuid_libs
+      - util-linux-core_file-system
+    contents:
+      /usr/sbin/findfs:
+      /usr/sbin/fsck.cramfs:
+      /usr/sbin/fsck.minix:
+      /usr/sbin/fsfreeze:
+      /usr/sbin/fstrim:
+      /usr/sbin/mkfs:
+      /usr/sbin/mkfs.cramfs:
+      /usr/sbin/mkfs.minix:
+      /usr/sbin/pivot_root:
+      /usr/sbin/swaplabel:
+      /usr/sbin/wipefs:
+
+  ipc:
+    essential:
+      - glibc_libs
+      - libsmartcols_libs
+      - util-linux-core_ipc
+    contents:
+      /usr/bin/lsipc:
+
+  kernel:
+    essential:
+      - glibc_libs
+      - util-linux-core_kernel
+    contents:
+      /usr/sbin/readprofile:
+
+  lock:
+    essential:
+      - libsmartcols_libs
+      - pcre2_libs
+      - libmount_libs
+      - glibc_libs
+      - libselinux_libs
+      - libblkid_libs
+      - util-linux-core_lock
+    contents:
+      /usr/bin/lslocks:
+
+  login:
+    essential:
+      - glibc_libs
+      - libsmartcols_libs
+      - pcre2_libs
+      - libzstd_libs
+      - libgcc_libs
+      - lz4-libs_libs
+      - libgcrypt_libs
+      - systemd-libs_libs
+      - libselinux_libs
+      - libcap_libs
+      - xz-libs_libs
+      - libgpg-error_libs
+      - libxcrypt_libs
+    contents:
+      /usr/bin/last:
+      /usr/bin/lastb:
+      /usr/bin/lslogins:
+      /usr/bin/utmpdump:
+      /usr/sbin/sulogin:
+
+  mcookie:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/bin/mcookie:
+
+  memory:
+    essential:
+      - glibc_libs
+      - libsmartcols_libs
+    contents:
+      /usr/bin/lsmem:
+
+
+  namespace:
+    essential:
+      - libselinux_libs
+      - libblkid_libs
+      - glibc_libs
+      - libmount_libs
+      - pcre2_libs
+      - libsmartcols_libs
+      - util-linux-core_namespace
+    contents:
+      /usr/bin/lsns:
+
+
+  pam-profiles:
+    contents:
+      /etc/pam.d/runuser:
+      /etc/pam.d/runuser-l:
+      /etc/pam.d/su:
+      /etc/pam.d/su-l:
+
+  process:
+    essential:
+      - glibc_libs
+      - libcap-ng_libs
+      - libsmartcols_libs
+      - util-linux-core_process
+    contents:
+      /usr/bin/choom:
+      /usr/bin/prlimit:
+      /usr/bin/setpriv:
+      /usr/bin/uclampset:
+
+  services:
+    essential:
+      - util-linux_bins
+    contents:
+      /usr/lib/systemd/system/fstrim.service:
+      /usr/lib/systemd/system/fstrim.timer:
+
+  set-arch:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/bin/linux64:
+      /usr/bin/setarch:
+      /usr/bin/x86_64: { arch: [x86_64] }
+
+  # Contains the binaries which supports running commands with substitute user
+  # and group IDs.
+  su-support:
+    essential:
+      - glibc_libs
+      - libcap-ng_libs
+      # Libraries from libpam-modules are required as the libpam-runtime
+      # configs reference them.
+      - pam_libs
+      # su reads the configs in /etc/pam.d to authenticate the user.
+      - libeconf_libs
+      - audit-libs_libs
+    contents:
+      /usr/bin/su:
+      /usr/sbin/runuser:
+
+  timer:
+    essential:
+      - glibc_libs
+      - libsmartcols_libs
+    contents:
+      /usr/bin/wdctl:
+      /usr/sbin/rtcwake:
+
+  tty:
+    essential:
+      - glibc_libs
+      - ncurses-libs_libs
+      - util-linux-core_tty
+    contents:
+      /usr/bin/mesg:
+      /usr/bin/setterm:
+      /usr/sbin/ldattach:
+
+  copyright:
+    contents:
+      /usr/share/licenses/util-linux/COPYING*:

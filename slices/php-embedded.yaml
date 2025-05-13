@@ -1,0 +1,20 @@
+package: php-embedded
+
+slices:
+  libs:
+    essential:
+      - libxml2_libs
+      - krb5-libs_support
+      - krb5-libs_crypto
+      - krb5-libs_libkrb5
+      - xz-libs_libs
+      - openssl-libs_libs
+      - libxcrypt_libs
+      - keyutils-libs_libs
+      - pcre2_libs
+      - glibc_libs
+      - zlib_libs
+      - libcom_err_libs
+      - libselinux_libs
+    contents:
+      /usr/lib64/libphp*:
