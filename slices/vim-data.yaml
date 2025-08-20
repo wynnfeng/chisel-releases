@@ -1,0 +1,10 @@
+package: vim-data
+essential:
+  - vim-data_copyright
+slices:
+  defaults:
+    contents:
+      /usr/share/vim/vim90/defaults.vim:
+  copyright:
+    contents:
+      /usr/share/licenses/vim-data/LICENSE:

@@ -1,16 +1,18 @@
-package: tar
+package: vim-minimal
 essential:
-  - tar_copyright
+  - vim-minimal_copyright
 slices:
   bins:
     essential:
       - pcre2_libs
       - glibc_libs
       - libattr_libs
+      - ncurses-libs_libs
       - libselinux_libs
       - libacl_libs
+      - vim-data_defaults
     contents:
-      /usr/bin/tar:
+      /usr/libexec/vi:
+      /usr/bin/vi:
   copyright:
     contents:
-      /usr/share/licenses/tar/COPYING:

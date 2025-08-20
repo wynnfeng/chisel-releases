@@ -1,0 +1,23 @@
+package: kmod
+essential:
+  - kmod_copyright
+slices:
+  bins:
+    essential:
+      - xz-libs_libs
+      - openssl-libs_libs
+      - glibc_libs
+      - libzstd_libs
+      - zlib_libs
+      - libgcc_libs
+    contents:
+      /usr/sbin/depmod:
+      /usr/sbin/insmod:
+      /usr/sbin/lsmod:
+      /usr/sbin/modinfo:
+      /usr/sbin/modprobe:
+      /usr/sbin/rmmod:
+      /usr/bin/kmod:
+  copyright:
+    contents:
+      /usr/share/licenses/kmod/COPYING:
