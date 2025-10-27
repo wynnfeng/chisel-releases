@@ -1,0 +1,13 @@
+package: traceroute
+essential:
+  - traceroute_copyright
+slices:
+  bins:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/bin/traceroute:
+      /usr/bin/traceroute6:
+  copyright:
+    contents:
+      /usr/share/licenses/traceroute/COPYING:

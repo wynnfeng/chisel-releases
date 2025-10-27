@@ -1,0 +1,25 @@
+package: net-tools
+essential:
+  - net-tools_copyright
+slices:
+  sbins:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/sbin/arp:
+      /usr/sbin/ether-wake:
+      /usr/sbin/ipmaddr:
+      /usr/sbin/iptunnel:
+      /usr/sbin/nameif:
+      /usr/sbin/plipconfig:
+      /usr/sbin/slattach:
+  bins:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/bin/ifconfig:
+      /usr/bin/netstat:
+      /usr/bin/route:
+  copyright:
+    contents:
+      /usr/share/licenses/net-tools/COPYING:

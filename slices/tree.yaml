@@ -1,0 +1,12 @@
+package: tree
+essential:
+  - tree_copyright
+slices:
+  bins:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/bin/tree:
+  copyright:
+    contents:
+      /usr/share/licenses/tree/LICENSE:

@@ -1,0 +1,19 @@
+package: lsof
+essential:
+  - lsof_copyright
+slices:
+  bins:
+    essential:
+      - krb5-libs_libs
+      - openssl-libs_libs
+      - keyutils-libs_libs
+      - pcre2_libs
+      - glibc_libs
+      - zlib_libs
+      - libcom_err_libs
+      - libtirpc_libs
+      - libselinux_libs
+    contents:
+      /usr/bin/lsof:
+  copyright:
+    contents:

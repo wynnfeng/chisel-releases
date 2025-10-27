@@ -1,0 +1,12 @@
+package: npm
+essential:
+  - npm_copyright
+slices:
+  libs:
+    contents:
+      /usr/bin/npm:
+      /usr/bin/npx:
+      /usr/etc/npmrc:
+      /usr/lib/node_modules/npm/**:
+  copyright:
+    contents:

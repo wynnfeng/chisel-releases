@@ -1,0 +1,16 @@
+package: unzip
+essential:
+  - unzip_copyright
+slices:
+  bins:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/bin/funzip:
+      /usr/bin/unzip:
+      /usr/bin/unzipsfx:
+      /usr/bin/zipinfo:
+  copyright:
+    contents:
+      /usr/share/licenses/unzip/COPYING.OLD:
+      /usr/share/licenses/unzip/LICENSE:

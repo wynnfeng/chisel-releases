@@ -1,0 +1,9 @@
+package: nodejs-full-i18n
+essential:
+  - nodejs-full-i18n_copyright
+slices:
+  libs:
+    contents:
+      /usr/share/nodejs/icudata/icudt74l.dat:
+  copyright:
+    contents:

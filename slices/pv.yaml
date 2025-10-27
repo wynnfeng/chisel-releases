@@ -1,0 +1,12 @@
+package: pv
+essential:
+  - pv_copyright
+slices:
+  bins:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/bin/pv:
+  copyright:
+    contents:
+      /usr/share/licenses/pv/COPYING:

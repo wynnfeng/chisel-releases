@@ -1,0 +1,19 @@
+package: iputils
+essential:
+  - iputils_copyright
+slices:
+  bins:
+    essential:
+      - glibc_libs
+      - libcap_libs
+      - libunistring_libs
+      - libidn2_libs
+    contents:
+      /usr/bin/arping:
+      /usr/bin/clockdiff:
+      /usr/bin/ping:
+      /usr/bin/ping6:
+      /usr/bin/tracepath:
+  copyright:
+    contents:
+      /usr/share/licenses/iputils/LICENSE:

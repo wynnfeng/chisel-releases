@@ -1,0 +1,17 @@
+package: xz
+essential:
+  - xz_copyright
+slices:
+  bins:
+    essential:
+      - xz-libs_libs
+      - glibc_libs
+    contents:
+      /usr/bin/unxz:
+      /usr/bin/xz:
+      /usr/bin/xzcat:
+      /usr/bin/xzdec:
+
+  copyright:
+    contents:
+      /usr/share/licenses/xz/COPYING:

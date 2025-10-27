@@ -1,0 +1,11 @@
+package: nodejs-devel
+essential:
+  - nodejs-devel_copyright
+slices:
+  libs:
+    contents:
+      /usr/include/node/**:
+      /usr/lib64/libnode.so:
+      /usr/share/node/common.gypi:
+  copyright:
+    contents:

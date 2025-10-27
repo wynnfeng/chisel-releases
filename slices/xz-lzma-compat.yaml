@@ -1,0 +1,16 @@
+package: xz-lzma-compat
+essential:
+  - xz-lzma-compat_copyright
+slices:
+  bins:
+    essential:
+      - xz-libs_libs
+      - glibc_libs
+    contents:
+      /usr/bin/lzcat:
+      /usr/bin/lzma:
+      /usr/bin/lzmadec:
+      /usr/bin/lzmainfo:
+      /usr/bin/unlzma:
+  copyright:
+    contents:
