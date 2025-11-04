@@ -1,0 +1,12 @@
+package: dumb-init
+essential:
+  - dumb-init_copyright
+slices:
+  bins:
+    essential:
+      - glibc_libs
+    contents:
+      /usr/bin/dumb-init:
+  copyright:
+    contents:
+      /usr/share/licenses/dumb-init/LICENSE:
