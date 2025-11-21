@@ -1,0 +1,15 @@
+package: crontabs
+essential:
+  - crontabs_copyright
+slices:
+  etc:
+    contents:
+      /etc/cron.daily:
+      /etc/cron.hourly:
+      /etc/cron.monthly:
+      /etc/cron.weekly:
+      /etc/crontab:
+      /etc/sysconfig/run-parts:
+  copyright:
+    contents:
+      /usr/share/licenses/crontabs/COPYING:

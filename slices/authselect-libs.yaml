@@ -1,0 +1,24 @@
+package: authselect-libs
+essential:
+  - authselect-libs_copyright
+slices:
+  libs:
+    essential:
+      - pcre2_libs
+      - glibc_libs
+      - libselinux_libs
+    contents:
+      /usr/lib64/libauthselect.so.3:
+      /usr/lib64/libauthselect.so.3.1.3:
+  config:
+    contents:
+      /etc/nsswitch.conf:
+      /etc/pam.d/fingerprint-auth:
+      /etc/pam.d/password-auth:
+      /etc/pam.d/postlogin:
+      /etc/pam.d/smartcard-auth:
+      /etc/pam.d/system-auth:
+
+  copyright:
+    contents:
+      /usr/share/licenses/authselect-libs/COPYING:

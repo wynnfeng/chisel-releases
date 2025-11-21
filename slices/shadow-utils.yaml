@@ -1,0 +1,28 @@
+package: shadow-utils
+essential:
+  - shadow-utils_copyright
+slices:
+  etc:
+    contents:
+      /etc/default/useradd:
+      /etc/login.defs:
+  bins:
+    essential:
+      - libcap-ng_libs
+      - libxcrypt_libs
+      - pcre2_libs
+      - libeconf_libs
+      - glibc_libs
+      - audit-libs_libs
+      - libselinux_libs
+    contents:
+      /usr/bin/chage:
+      /usr/bin/gpasswd:
+      /usr/bin/lastlog:
+      /usr/bin/newgidmap:
+      /usr/bin/newgrp:
+      /usr/bin/newuidmap:
+      /usr/bin/sg:
+  copyright:
+    contents:
+      /usr/share/licenses/shadow-utils/COPYING:

@@ -2,6 +2,11 @@ package: cronie
 essential:
   - cronie_copyright
 slices:
+  base:
+    essential:
+      - cronie_bins
+      - cronie_var 
+      - cronie_config
   services:
     contents:
       /lib/systemd/system/crond.service:
@@ -9,15 +14,22 @@ slices:
     contents:
       /etc/cron.d/0hourly:
       /etc/cron.deny:
-      /etc/pam.d/crond:
+      /etc/pam.d/crond: {text: FIXME, mutable: true}
       /etc/sysconfig/crond:
+    mutate: |
+      crond_text = """# Minimal PAM configuration for crond
+      account    required     pam_permit.so
+      session    required     pam_permit.so
+      auth       required     pam_permit.so
+      """
+      content.write("/etc/pam.d/crond", crond_text)
   bins:
     essential:
       - libcap-ng_libs
       - pcre2_libs
       - libeconf_libs
       - glibc_libs
-      - pam_libs
+      - pam_libsecurity
       - audit-libs_libs
       - libselinux_libs
     contents:

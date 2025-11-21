@@ -1,0 +1,18 @@
+package: systemd-pam
+essential:
+  - systemd-pam_copyright
+slices:
+  libs:
+    essential:
+      - libcap-ng_libs
+      - libeconf_libs
+      - glibc_libs
+      - libcap_libs
+      - pam_libs
+      - audit-libs_libs
+      - libgcc_libs
+    contents:
+      /usr/lib64/security/pam_systemd.so:
+      /usr/lib64/security/pam_systemd_loadkey.so:
+  copyright:
+    contents:

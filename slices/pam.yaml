@@ -29,7 +29,6 @@ slices:
       /usr/lib*/security/pam_echo.so:
       /usr/lib*/security/pam_env.so:
       /usr/lib*/security/pam_exec.so:
-      /usr/lib*/security/pam_extrausers.so:
       /usr/lib*/security/pam_faildelay.so:
       /usr/lib*/security/pam_faillock.so:
       /usr/lib*/security/pam_filter.so:
@@ -66,6 +65,12 @@ slices:
       /usr/lib*/security/pam_warn.so:
       /usr/lib*/security/pam_wheel.so:
       /usr/lib*/security/pam_xauth.so:
+
+  config:
+    contents:
+      /etc/pam.d/config-util:
+      /etc/pam.d/other:
+      /etc/security/**:
 
   copyright:
     contents:
